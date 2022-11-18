@@ -17,7 +17,7 @@ a:hover {
 }
 
 /************Mise en forme de la partie gauche de la page*************/
-header {
+header a{
     display: flex;
 }
 
@@ -55,6 +55,12 @@ h1 {
     padding: 20px;
     text-align: right;
     border-radius: 10px;
+    transition: 0.5s;
+}
+#img-logo article:hover{
+    background-color: rgba(100, 70, 50, 0.7);
+    transition: 0.5s;
+
 }
 
 footer {
