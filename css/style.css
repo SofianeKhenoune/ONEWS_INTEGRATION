@@ -1,0 +1,198 @@
+/********************mise en forme de la page*************/
+body {
+    background-color: #f9f9f9;
+    font-family: 'Alef', sans-serif;
+}
+a{
+    transition: 0.3s;
+}
+a:hover {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/************Mise en forme de la partie gauche de la page*************/
+header {
+    display: flex;
+}
+
+header img {
+    width: 30px;
+    padding-right: 10px;
+    align-content: flex-start;
+    height: 40px;
+}
+
+h1 {
+    line-height: 25px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#img-logo {
+    padding: 10px;
+    background: url(../images/nicole.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#img-logo h2 strong {
+    font-size: 0.7em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#img-logo article {
+    background-color: rgba(100, 70, 50, 0.3);
+    padding: 20px;
+    text-align: right;
+    border-radius: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+footer li {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+footer a {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+}
+
+footer ul {
+    width: 50%;
+    display: flex;
+    list-style: none;
+    background-color: #fff;
+    background-color: rgba(100, 70, 50, 0.3);
+    justify-content: space-between;
+    border-radius: 5px;
+    padding-inline-start: 0px;
+    overflow: hidden;
+}
+
+#img-logo ul li a:hover {
+    background-color: rgba(100, 70, 50);
+    color: #fff;
+}
+
+
+/************Mise en forme de la partie droite de la page*************/
+#news {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: scroll;
+}
+
+#news section {
+    display: flex;
+    border-top: 1px solid #eaeaea;
+    background-color: #fff;
+
+}
+
+#news section article {
+    padding: 30px 10px;
+}
+
+#news section article a {
+    display: inline-block;
+}
+
+#news section article a:last-child {
+    background-color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.infos {
+    display: flex;
+}
+
+.infos img {
+    height: 20px;
+}
+
+.infos img,
+.infos h5,
+.infos p {
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+
+.news-link,
+.team-link,
+.work-link {
+    letter-spacing: 2px;
+    border: 1px solid #fff;
+    padding: 3px 5px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news-link:hover,
+.team-link:hover,
+.work-link:hover {
+    letter-spacing: 2px;
+    border: #000 solid 1px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.news-link {
+    background-color: #98DC62;
+}
+
+.news-link:hover {
+    background-color: #fff;
+    color: #98DC62;
+}
+
+.work-link {
+    background-color: #0766F0;
+}
+
+.work-link:hover {
+    background-color: #fff;
+    color: #0766F0;
+
+}
+
+.team-link {
+    background-color: #DC5E53;
+}
+
+.team-link:hover {
+    background-color: #fff;
+    color: #DC5E53;
+}
+#news article a:last-child{
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+#news article a:last-child:hover{
+    background-color: rgb(133, 195, 83, 0.5);
+}
