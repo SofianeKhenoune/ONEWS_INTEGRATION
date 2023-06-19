@@ -10,17 +10,21 @@ body a:hover {
   text-decoration: none;
   transition: 0.3s;
 }
-
-.wrapper {
-  display: flex;
+body .wrapper {
   display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "img-logo news";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "img-logo" "news";
+  color: blue;
+  /************Mise en forme de la partie gauche de la page*************/
+  /************Mise en forme de la partie droite de la page*************/
 }
-
-/************Mise en forme de la partie gauche de la page*************/
-#left-main {
+@media screen and (min-width: 768px) {
+  body .wrapper {
+    color: red;
+  }
+}
+body .wrapper #left-main {
   padding: 10px;
   background: url(../images/nicole.jpg) no-repeat center;
   background-size: cover;
@@ -30,85 +34,81 @@ body a:hover {
   color: #fff;
   grid-area: img-logo;
 }
-#left-main header a {
+body .wrapper #left-main header a {
   display: flex;
 }
-#left-main header a h1 {
+body .wrapper #left-main header a h1 {
   line-height: 25px;
   color: white;
   text-transform: uppercase;
 }
-#left-main header a img {
+body .wrapper #left-main header a img {
   width: 30px;
   padding-right: 10px;
   align-content: flex-start;
   height: 40px;
 }
-#left-main article {
+body .wrapper #left-main article {
   background-color: rgba(100, 70, 50, 0.3);
   padding: 20px;
   text-align: right;
   border-radius: 10px;
   transition: 0.5s;
 }
-#left-main article:hover {
+body .wrapper #left-main article:hover {
   background-color: rgba(100, 70, 50, 0.8);
   transition: 0.5s;
 }
-#left-main article h2 strong {
+body .wrapper #left-main article h2 strong {
   font-size: 0.7em;
   font-weight: normal;
   font-style: italic;
 }
-
-footer {
+body .wrapper footer {
   display: flex;
   justify-content: flex-end;
 }
-footer ul {
+body .wrapper footer ul {
   display: flex;
   list-style: none;
   background-color: rgba(100, 70, 50, 0.3);
   justify-content: space-between;
   border-radius: 5px;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
+  padding-inline-start: 0px;
   overflow: hidden;
 }
-footer ul li a {
+body .wrapper footer ul li a {
   color: #fff;
   display: inline-block;
   width: 100%;
   padding: 5px 10px;
 }
-footer ul li a:hover {
+body .wrapper footer ul li a:hover {
   background-color: rgb(100, 70, 50);
   color: #fff;
 }
-
-/************Mise en forme de la partie droite de la page*************/
-#right-news {
+body .wrapper #right-news {
   grid-area: news;
   display: flex;
   flex-direction: column;
   overflow: scroll;
 }
-#right-news h2 {
+body .wrapper #right-news h2 {
   padding: 10px 25px;
 }
-#right-news section {
+body .wrapper #right-news section {
   display: flex;
   border-top: 1px solid #eaeaea;
   background-color: #fff;
   padding-left: 15px;
 }
-#right-news section article {
+body .wrapper #right-news section article {
   padding: 30px 10px;
 }
-#right-news section article a {
+body .wrapper #right-news section article a {
   display: inline-block;
 }
-#right-news section article a:last-child {
+body .wrapper #right-news section article a:last-child {
   font-weight: normal;
   text-decoration: underline;
   color: #007bff;
@@ -116,27 +116,27 @@ footer ul li a:hover {
   border-radius: 3px;
   transform-origin: top left;
 }
-#right-news section article a:last-child:hover {
+body .wrapper #right-news section article a:last-child:hover {
   background-color: rgba(133, 195, 83, 0.5);
   transform: scale(1.2);
   color: #000;
 }
-#right-news section article .infos {
+body .wrapper #right-news section article .infos {
   display: flex;
   font-size: 0.8em;
 }
-#right-news section article .infos img {
+body .wrapper #right-news section article .infos img {
   height: 20px;
 }
-#right-news section article .infos h5 {
+body .wrapper #right-news section article .infos h5 {
   margin-right: 10px;
 }
-#right-news section article .infos p {
+body .wrapper #right-news section article .infos p {
   margin-right: 10px;
 }
-#right-news section article .news-link,
-#right-news section article .team-link,
-#right-news section article .work-link {
+body .wrapper #right-news section article .news-link,
+body .wrapper #right-news section article .team-link,
+body .wrapper #right-news section article .work-link {
   letter-spacing: 2px;
   border: 3px solid #fff;
   padding: 3px 5px;
@@ -145,34 +145,36 @@ footer ul li a:hover {
   font-weight: bold;
   margin-bottom: 20px;
 }
-#right-news section article .news-link:hover,
-#right-news section article .team-link:hover,
-#right-news section article .work-link:hover {
+body .wrapper #right-news section article .news-link:hover,
+body .wrapper #right-news section article .team-link:hover,
+body .wrapper #right-news section article .work-link:hover {
   letter-spacing: 2px;
   text-decoration: none;
   letter-spacing: 3px;
 }
-#right-news section article .news-link {
-  background-color: #98DC62;
+body .wrapper #right-news section article .news-link {
+  background-color: #98dc62;
 }
-#right-news section article .news-link:hover {
+body .wrapper #right-news section article .news-link:hover {
   background-color: #fff;
-  color: #98DC62;
-  border: #98DC62 solid 3px;
+  color: #98dc62;
+  border: #98dc62 solid 3px;
 }
-#right-news section article .work-link {
-  background-color: #0766F0;
+body .wrapper #right-news section article .work-link {
+  background-color: #0766f0;
 }
-#right-news section article .work-link:hover {
+body .wrapper #right-news section article .work-link:hover {
   background-color: #fff;
-  color: #0766F0;
-  border: #0766F0 solid 3px;
+  color: #0766f0;
+  border: #0766f0 solid 3px;
 }
-#right-news section article .team-link {
-  background-color: #DC5E53;
+body .wrapper #right-news section article .team-link {
+  background-color: #dc5e53;
 }
-#right-news section article .team-link:hover {
+body .wrapper #right-news section article .team-link:hover {
   background-color: #fff;
-  color: #DC5E53;
-  border: #DC5E53 solid 3px;
-}/*# sourceMappingURL=style.css.map */
+  color: #dc5e53;
+  border: #dc5e53 solid 3px;
+}
+
+/*# sourceMappingURL=style.css.map */
