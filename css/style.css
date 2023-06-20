@@ -67,6 +67,7 @@ body .wrapper #left-main article h2 strong {
 body .wrapper footer {
   display: flex;
   justify-content: flex-end;
+  font-size: 1em;
 }
 body .wrapper footer ul {
   display: flex;
@@ -74,7 +75,8 @@ body .wrapper footer ul {
   background-color: rgba(100, 70, 50, 0.3);
   justify-content: space-between;
   border-radius: 5px;
-  padding-inline-start: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
   overflow: hidden;
 }
 body .wrapper footer ul li a {
@@ -94,7 +96,7 @@ body .wrapper #right-news {
 }
 @media screen and (min-width: 768px) {
   body .wrapper #right-news {
-    overflow: scroll;
+    overflow: auto;
   }
 }
 body .wrapper #right-news h2 {
@@ -138,16 +140,17 @@ body .wrapper #right-news section article a:last-child:hover {
 }
 body .wrapper #right-news section article .infos {
   display: flex;
+  align-items: center;
   font-size: 0.8em;
+  height: 1.5em;
+  margin-bottom: 1em;
 }
 body .wrapper #right-news section article .infos img {
-  height: 20px;
+  height: 100%;
 }
-body .wrapper #right-news section article .infos h5 {
-  margin-right: 10px;
-}
+body .wrapper #right-news section article .infos h5,
 body .wrapper #right-news section article .infos p {
-  margin-right: 10px;
+  margin: 0 0.5em;
 }
 body .wrapper #right-news section article .news-link,
 body .wrapper #right-news section article .team-link,
@@ -190,6 +193,4 @@ body .wrapper #right-news section article .team-link:hover {
   background-color: #fff;
   color: #dc5e53;
   border: #dc5e53 solid 3px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
