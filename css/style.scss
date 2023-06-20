@@ -135,15 +135,16 @@ body {
           }
           .infos {
             display: flex;
+            align-items: center;
             font-size: 0.8em;
+            height: 1.5em;
+            margin-bottom: 1em;
             img {
-              height: 20px;
+              height: 100%;
             }
-            h5 {
-              margin-right: 10px;
-            }
+            h5,
             p {
-              margin-right: 10px;
+              margin: 0 0.5em;
             }
           }
           .news-link,
