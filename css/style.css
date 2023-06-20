@@ -13,21 +13,21 @@ body a:hover {
 body .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 100vh auto;
   grid-template-areas: "img-logo" "news";
-  color: blue;
   /************Mise en forme de la partie gauche de la page*************/
   /************Mise en forme de la partie droite de la page*************/
 }
 @media screen and (min-width: 768px) {
   body .wrapper {
-    color: red;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100vh;
+    grid-template-areas: "img-logo news";
   }
 }
 body .wrapper #left-main {
   padding: 10px;
-  background: url(../images/nicole.jpg) no-repeat center;
-  background-size: cover;
+  background: url(../images/nicole.jpg) no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,7 +91,11 @@ body .wrapper #right-news {
   grid-area: news;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+}
+@media screen and (min-width: 768px) {
+  body .wrapper #right-news {
+    overflow: scroll;
+  }
 }
 body .wrapper #right-news h2 {
   padding: 10px 25px;
@@ -101,9 +105,20 @@ body .wrapper #right-news section {
   border-top: 1px solid #eaeaea;
   background-color: #fff;
   padding-left: 15px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  body .wrapper #right-news section {
+    flex-direction: row;
+  }
 }
 body .wrapper #right-news section article {
   padding: 30px 10px;
+}
+@media screen and (min-width: 768px) {
+  body .wrapper #right-news section article {
+    max-width: 50%;
+  }
 }
 body .wrapper #right-news section article a {
   display: inline-block;

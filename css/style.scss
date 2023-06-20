@@ -12,20 +12,19 @@ body {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 100vh auto;
     grid-template-areas:
       'img-logo'
       'news';
-    color: blue;
     @media screen and (min-width: 768px) {
-      color: red;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 100vh;
+      grid-template-areas: 'img-logo news';
     }
     /************Mise en forme de la partie gauche de la page*************/
-
     #left-main {
       padding: 10px;
-      background: url(../images/nicole.jpg) no-repeat center;
-      background-size: cover;
+      background: url(../images/nicole.jpg) no-repeat center / cover;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -98,7 +97,9 @@ body {
       grid-area: news;
       display: flex;
       flex-direction: column;
-      overflow: scroll;
+      @media screen and (min-width: 768px) {
+        overflow: scroll;
+      }
       h2 {
         padding: 10px 25px;
       }
@@ -107,8 +108,15 @@ body {
         border-top: 1px solid #eaeaea;
         background-color: #fff;
         padding-left: 15px;
+        flex-direction: column;
+        @media screen and (min-width: 768px) {
+          flex-direction: row;
+        }
         article {
           padding: 30px 10px;
+          @media screen and (min-width: 768px) {
+            max-width: 50%;
+          }
           a {
             display: inline-block;
             &:last-child {
