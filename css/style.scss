@@ -98,7 +98,7 @@ body {
       display: flex;
       flex-direction: column;
       @media screen and (min-width: 768px) {
-        overflow: scroll;
+        overflow-y: scroll;
       }
       h2 {
         padding: 10px 25px;
